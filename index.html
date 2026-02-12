@@ -484,28 +484,30 @@
                     createSparkle(yesBtn);
                 }
                 
-                // Determine which path was taken and show appropriate response
+                // Determine which path was taken and redirect to appropriate YouTube link
                 if (!clickedMaybe && !clickedNo) {
-                    // Path 1: Direct Yes - Show Yippieeeeeee and redirect
+                    // Path 1: Direct Yes - Show Yippieeeeeee and redirect to YouTube
                     mainTitle.innerHTML = 'Yippieeeeeee!';
                     yesBtn.style.opacity = '0';
                     
                     // Redirect after 2 seconds
                     setTimeout(() => {
-                        window.location.href = './letter.html';
+                        window.location.href = 'https://www.youtube.com/watch?v=IxX_QHay02M&list=RDIxX_QHay02M&start_radio=1';
                     }, 2000);
                     
                 } else if (clickedMaybe && !clickedNo) {
-                    // Path 2: Maybe → Yes
-                    mainTitle.style.fontSize = 'clamp(1.2rem, 4vw, 1.8rem)';
-                    mainTitle.innerHTML = 'You either chose to test the features, if that\'s so YOU CANT QUALITY CHECK MY CODE FOOL. Or if it\'s an actual maybe, we respect that we have atleast gotten a maybe';
+                    // Path 2: Maybe → Yes - Redirect to YouTube
                     yesBtn.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = 'https://www.youtube.com/watch?v=zYexMDaHqY0';
+                    }, 1000);
                     
                 } else if (clickedNo) {
-                    // Path 3: No → Yes
-                    mainTitle.style.fontSize = 'clamp(1.2rem, 4vw, 1.8rem)';
-                    mainTitle.innerHTML = 'If you\'re QUALITY CHECKING, YOU ARE NOT A TESTER FOOL. But if you wanted to choose No, I am sorry if this made you uncomfortable ';
+                    // Path 3: No → Yes - Redirect to YouTube
                     yesBtn.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = 'https://www.youtube.com/watch?v=lyj5AROGr_o';
+                    }, 1000);
                 }
             });
             
